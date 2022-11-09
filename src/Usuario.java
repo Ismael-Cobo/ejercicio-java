@@ -44,6 +44,12 @@ public class Usuario {
         return DNI;
     }
     
+    /*
+        @param DNI dni para añadir
+        comprobamos que el dni es válido
+        si no lo es devolvemos false
+        si lo es lo añadimos y devolvemos true
+     */
     public boolean setDNI(String DNI) {
     
         Pattern pat = Pattern.compile("[0-9]{7,8}[A-Za-z]");
@@ -57,6 +63,9 @@ public class Usuario {
         return true;
     }
     
+    /*
+        @return devuelve los valores del usuario
+     */
     @Override
     public String toString() {
         return "Usuario{" +
