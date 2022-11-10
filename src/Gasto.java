@@ -4,16 +4,16 @@ public class Gasto extends Dinero{
     /*
         Inicializamos el gasto
         @param gasto el dinero que gastamos
-        @param descripcion la descripcion del gasto
+        @param description la descripcion del gasto
      */
-    public Gasto(double gasto, String descripcion) {
+    public Gasto(double gasto, String description) {
         this.dinero = gasto;
-        this.descripcion = descripcion;
+        this.description = description;
     }
     
     // Mostramos el gasto en un string
     @Override
     public String toString() {
-        return "Ingreso: " + this.descripcion + ", cantidad " + this.dinero + "€";
+        return "Gasto: " + this.description + ", cantidad " + this.dinero + "€";
     }
 }

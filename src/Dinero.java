@@ -6,7 +6,7 @@ public abstract class Dinero {
     double dinero;
     
     // La descripción que se usará para la transacción
-    String descripcion;
+    String description;
     
     /*
         Método para recupeara el dinero
@@ -28,7 +28,7 @@ public abstract class Dinero {
         @return El dinero
      */
     public String getDescripcion() {
-        return descripcion;
+        return description;
     }
     
     
@@ -36,7 +36,7 @@ public abstract class Dinero {
         @param descripcion
         para setear la descripcion
      */
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDescripcion(String description) {
+        this.description = description;
     }
 }

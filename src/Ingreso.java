@@ -3,16 +3,16 @@ public class Ingreso extends Dinero{
     /*
         Inicializamos el Ingreso
         @param ingreso el dinero que ingresamos
-        @param descripcion la descripcion del ingreso
+        @param description la descripcion del ingreso
      */
-    public Ingreso(double ingreso, String descripcion) {
+    public Ingreso(double ingreso, String description) {
         this.dinero = ingreso;
-        this.descripcion = descripcion;
+        this.description = description;
     }
     
     // Mostramos el ingreso en un string
     @Override
     public String toString() {
-        return "Gasto: " + this.descripcion + ", cantidad " + this.dinero + "€";
+        return "Ingreso: " + this.description + ", cantidad " + this.dinero + "€";
     }
 }

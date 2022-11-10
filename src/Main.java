@@ -77,7 +77,7 @@ public class Main {
             inputText = scanner.nextLine();
             isDniValid = usuario.setDNI(inputText);
         }
-        
+        System.out.println(usuario.toString());
         return usuario;
         
     }
@@ -135,4 +135,6 @@ public class Main {
     public static void mostrarSaldo() {
         System.out.println("Sueldo restante: " + cuenta.getSaldo());
     }
+    
+    
 }
