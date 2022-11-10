@@ -11,18 +11,6 @@ public class Usuario {
     public Usuario() {
     }
     
-    /*
-     Creamos el constructor con las variables necesarias
-     @param nombre nombre del usuario
-     @param edad edad del usuario
-     @param DNI dni del usuario
-     */
-    public Usuario(String nombre, int edad, String DNI) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.DNI = DNI;
-    }
-    
     
     public String getNombre() {
         return nombre;
@@ -52,10 +40,10 @@ public class Usuario {
      */
     public boolean setDNI(String DNI) {
     
-        Pattern pat = Pattern.compile("[0-9]{7,8}[A-Za-z]");
+        Pattern pat = Pattern.compile("[0-9]{8}-?[A-Z]");
         Matcher mat = pat.matcher(DNI);
         if(!mat.matches()) {
-            System.out.println("El dni es incorrecto");
+            System.out.println("DNI introducido incorrecto");
             return false ;
         }
         

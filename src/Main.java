@@ -62,22 +62,23 @@ public class Main {
         String inputText = scanner.nextLine();
         usuario.setNombre(inputText);
     
-        System.out.println("Introduce el la edad:");
+        System.out.println("Introduce el la edad del usuario:");
     
         inputText = scanner.nextLine();
         usuario.setEdad(Integer.parseInt(inputText));
     
-        System.out.println("Introduce el DNI:");
+        System.out.println("Introduce el DNI del usuario:");
     
         inputText = scanner.nextLine();
         boolean isDniValid = usuario.setDNI(inputText);
         while (!isDniValid) {
-            System.out.println("Introduce el DNI:");
+            System.out.println("Introduce el DNI del usuario válido:");
     
             inputText = scanner.nextLine();
             isDniValid = usuario.setDNI(inputText);
         }
-        System.out.println(usuario.toString());
+        System.out.println("Usuario creado correctamente");
+//        System.out.println(usuario.toString());
         return usuario;
         
     }
@@ -86,11 +87,11 @@ public class Main {
     public static void addIngreso() {
         Scanner scanner = new Scanner(System.in);
     
-        System.out.println("Introduce la descripción del ingreso:");
+        System.out.println("Introduce la descripción");
     
         String inputDescripcion = scanner.nextLine();
     
-        System.out.println("Introduce la cantidad del ingreso:");
+        System.out.println("Introduce la cantidad");
     
         double inputIngreso = Double.parseDouble(scanner.nextLine());
         
@@ -103,11 +104,11 @@ public class Main {
     public static void addGasto() {
         Scanner scanner = new Scanner(System.in);
     
-        System.out.println("Introduce la descripción del gasto:");
+        System.out.println("Introduce la descripción");
     
         String inputDescripcion = scanner.nextLine();
     
-        System.out.println("Introduce la cantidad del gasto:");
+        System.out.println("Introduce la cantidad");
     
         double inputGasto = Double.parseDouble(scanner.nextLine());
     
@@ -133,7 +134,7 @@ public class Main {
     
     // Mostramos el sueldo total
     public static void mostrarSaldo() {
-        System.out.println("Sueldo restante: " + cuenta.getSaldo());
+        System.out.println("El saldo actual de la cuenta es: " + cuenta.getSaldo()+ "€");
     }
     
     
