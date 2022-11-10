@@ -20,20 +20,20 @@ public class Cuenta {
     }
     
     /*
-       @param descripcion descripción del ingreso ha añadir
+       @param description descripción del ingreso ha añadir
        @param cantidad dinero ha añadir al ingreso
        inicializamos la clase ingreso
        añadimos el ingreso a la lista de ingresos
        y sumamos la cantidad al saldo total
      */
-    public void addIngresos(String descripcion, double cantidad) {
-        Ingreso ingresoToAdd = new Ingreso(cantidad, descripcion);
+    public void addIngresos(String description, double cantidad) {
+        Ingreso ingresoToAdd = new Ingreso(cantidad, description);
         this.ingresos.add(ingresoToAdd);
         this.saldo += cantidad;
     }
     
     /*
-       @param descripcion descripción del gasto ha añadir
+       @param description descripción del gasto ha añadir
        @param cantidad dinero ha añadir al gasto
        comprobamos que la cantidad no sea superior al saldo
        si es mayor devolvemos false
@@ -44,7 +44,7 @@ public class Cuenta {
        y restamos la cantidad al saldo total
        
      */
-    public void addGastos(String descripcion, double cantidad) {
+    public void addGastos(String description, double cantidad) {
         
         if(cantidad > saldo) {
             // TODO: Soltar la exception
@@ -53,7 +53,7 @@ public class Cuenta {
             return;
         }
         
-        Gasto gastoToAdd = new Gasto(cantidad, descripcion);
+        Gasto gastoToAdd = new Gasto(cantidad, description);
         this.gastos.add(gastoToAdd);
         
         this.saldo -= cantidad;
