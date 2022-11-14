@@ -19,15 +19,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
     
         System.out.println("""
-                Realiza una nueva acción
-                
-                1 Introduce un nuevo gasto
-                2 Introduce un nuevo ingreso
-                3 Mostrar gastos
-                4 Mostrar ingresos
-                5 Mostrar saldo
-                6 salir
-                """);
+Realiza una nueva acción
+1 Introduce un nuevo gasto
+2 Introduce un nuevo ingreso
+3 Mostrar gastos
+4 Mostrar ingresos
+5 Mostrar saldo
+6 salir
+""");
         
         String inputText = scanner.nextLine();
     
