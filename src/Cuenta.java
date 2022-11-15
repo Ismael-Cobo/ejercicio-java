@@ -5,8 +5,8 @@ public class Cuenta {
 
     private double saldo;
     private Usuario usuario;
-    private final List<Gasto> gastos = new ArrayList<>();
-    private final List<Ingreso> ingresos = new ArrayList<>();
+    private List<Gasto> gastos = new ArrayList<>();
+    private List<Ingreso> ingresos = new ArrayList<>();
     
     /*
      @param usuario el usuario de la cuenta
@@ -15,12 +15,16 @@ public class Cuenta {
      */
     public Cuenta(Usuario usuario) {
         this.saldo = 0;
-        this.usuario = usuario;
+        this.usuario = new Usuario();
+        this.usuario.setNombre(usuario.getNombre());
+        this.usuario.setDNI(usuario.getDNI());
+        this.usuario.setEdad(usuario.getEdad());
+        
     }
     
     /*
-       @param description descripción del ingreso ha añadir
-       @param cantidad dinero ha añadir al ingreso
+       @param description descripción del ingreso a añadir
+       @param cantidad dinero a añadir al ingreso
        inicializamos la clase ingreso
        añadimos el ingreso a la lista de ingresos
        y sumamos la cantidad al saldo total
@@ -32,8 +36,8 @@ public class Cuenta {
     }
     
     /*
-       @param description descripción del gasto ha añadir
-       @param cantidad dinero ha añadir al gasto
+       @param description descripción del gasto a añadir
+       @param cantidad dinero a añadir al gasto
        comprobamos que la cantidad no sea superior al saldo
        si es mayor devolvemos false
        @return false
