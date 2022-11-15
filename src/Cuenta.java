@@ -15,10 +15,7 @@ public class Cuenta {
      */
     public Cuenta(Usuario usuario) {
         this.saldo = 0;
-        this.usuario = new Usuario();
-        this.usuario.setNombre(usuario.getNombre());
-        this.usuario.setDNI(usuario.getDNI());
-        this.usuario.setEdad(usuario.getEdad());
+        this.usuario = usuario;
         
     }
     
@@ -52,8 +49,8 @@ public class Cuenta {
         if(cantidad > saldo) {
             // TODO: Soltar la exception
             System.out.println("El saldo es insuficiente");
-//            throw new GastoException("El saldo es insuficiente");
-            return;
+            throw new GastoException();
+//            return;
         }
         
         Gasto gastoToAdd = new Gasto(cantidad, description);

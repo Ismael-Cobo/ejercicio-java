@@ -33,7 +33,7 @@ public class Usuario {
     }
     
     /*
-        @param DNI dni para añadir
+        @param DNI para añadir
         comprobamos que el dni es válido
         si no lo es devolvemos false
         si lo es lo añadimos y devolvemos true

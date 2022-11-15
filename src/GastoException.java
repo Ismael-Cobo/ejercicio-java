@@ -1,6 +1,5 @@
-public class GastoException extends Exception{
+public class GastoException extends RuntimeException{
     
-    public GastoException(String message) {
-        super(message);
+    public GastoException() {
     }
 }
